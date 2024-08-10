@@ -20,14 +20,8 @@ steps:
       - 'us-central1'
       - '--platform'
       - 'managed'
-      - '--allow-unauthenticated' 
+      - '--allow-unauthenticated'
       - '--port'
       - '9000'
       - '--service-account'
       - 'cloud-build@rama17-05-2020.iam.gserviceaccount.com'  # Replace with your service account email
-
-images:
-  - 'us-central1-docker.pkg.dev/rama17-05-2020/rama-new/ramaapp:latest'
-
-options:
-  logging: CLOUD_LOGGING_ONLY
