@@ -1,11 +1,11 @@
 steps:
   # Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'us-central1-docker.pkg.dev/rama17-05-2020/rama-new/ramaapp:latest', '.']
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/rama17-05-2020/rama-new/ramaapp:tag2', '.']
 
   # Push the Docker image to Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'us-central1-docker.pkg.dev/rama17-05-2020/rama-new/ramaapp:latest']
+    args: ['push', 'us-central1-docker.pkg.dev/rama17-05-2020/rama-new/ramaapp:tag2']
 
   # Deploy to Cloud Run with specified service account
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
@@ -15,7 +15,7 @@ steps:
       - 'deploy'
       - 'rama-cloud-run'
       - '--image'
-      - 'us-central1-docker.pkg.dev/rama17-05-2020/rama-new/ramaapp:latest'
+      - 'us-central1-docker.pkg.dev/rama17-05-2020/rama-new/ramaapp:tag2'
       - '--region'
       - 'us-central1'
       - '--platform'
