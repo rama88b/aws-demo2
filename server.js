@@ -46,7 +46,7 @@ http
               </head>
               <body>
                 <img src="https://www.teamcomputers.com/images/logo.png" alt="TeamComputers Logo">
-                <h1>Welcome to TeamComputers at Delhi office-</h1>
+                <h1>Welcome to TeamComputers at Noida office-</h1>
               </body>
             </html>`;
       res.writeHead(200, {'Content-Type': 'text/html'});
