@@ -2,6 +2,9 @@ const http = require('http');
 const PORT = process.env.PORT || 9000;
 let slideMode = false;
 
+// Example color code, replace with the exact color used in the TeamComputers logo
+const teamComputersColor = '#003366'; // Replace with the exact color code from the logo
+
 http
   .createServer((req, res) => {
     console.log('New connection');
@@ -34,8 +37,8 @@ http
                     margin-bottom: 20px;
                   }
                   h1 {
-                    color: #003366; /* Example color similar to TeamComputers */
-                    font-size: 90%; /* Set font size to 90% */
+                    color: ${teamComputersColor}; /* Use the color code from the logo */
+                    font-size: 200%; /* Set font size to 90% */
                     font-weight: bold;
                     text-shadow: 2px 2px #ffff00; /* Example shadow color */
                   }
@@ -51,3 +54,4 @@ http
     }
   })
   .listen(PORT, () => console.log('Listening on', PORT));
+
