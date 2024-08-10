@@ -15,7 +15,7 @@ http
       // Normal mode
       const message = slideMode
         ? `<h1 style="color: blue; font-size: 20px; font-weight: bold; color: blue; text-shadow: 2px 2px yellow;">TEAMCOMPUTERS-V2 (Slide Mode)</h1>`
-        : `<h1 style="color: blue; font-size: 20px; font-weight: bold; color: blue; text-shadow: 2px 2px yellow;">TEAMCOMPUTERS-V3</h1>`;
+        : `<h1 style="color: blue; font-size: 20px; font-weight: bold; color: blue; text-shadow: 2px 2px yellow;">WelCome to TeamComputers-</h1>`;
       res.end(message);
     }
   })
